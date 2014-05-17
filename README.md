@@ -13,27 +13,27 @@ PathFinder
 Примеры built-in конфигурации и простого адаптера находятся в папке /examples
 
 ##Пример конфига
-```ini
-@category,htmlpage   [A-Za-zА-Яа-яЁё0-9_\.]+          #название категории или страницы
-@page                [0-9]+                           #числовой идентификатор
-@date                [0-9]{4}\-[0-9]{1,2}\-[0-9]{1,2} #дата в формате 2012-12-12
-  
-[Catalog] # т.к. тут не указан action, он по умолчанию будет index
-ANY /
-ANY /{page}
-ANY /{date}/{page}
-ANY /{category}/{page}
-ANY /{date}/{category}/{page}
-  
-[Pages]
-GET /{htmlpage}.html
-  
-[Users:regform]
-GET /register   {name: "Vladimir Makarov", status: "KIA"}  # какие-то дополнительные параметры
-  
-[Users:register]
-POST /register
-```
+
+	@category,htmlpage   [A-Za-zА-Яа-яЁё0-9_\.]+          #название категории или страницы
+	@page                [0-9]+                           #числовой идентификатор
+	@date                [0-9]{4}\-[0-9]{1,2}\-[0-9]{1,2} #дата в формате 2012-12-12
+	  
+	[Catalog] # т.к. тут не указан action, он по умолчанию будет index
+	ANY /
+	ANY /{page}
+	ANY /{date}/{page}
+	ANY /{category}/{page}
+	ANY /{date}/{category}/{page}
+	  
+	[Pages]
+	GET /{htmlpage}.html
+	  
+	[Users:regform]
+	GET /register   {name: "Vladimir Makarov", status: "KIA"}  # какие-то дополнительные параметры
+	  
+	[Users:register]
+	POST /register
+
 
 ##Пример генерации URL
 ```php
