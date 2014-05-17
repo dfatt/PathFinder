@@ -11,7 +11,7 @@ if (!$routes = apc_fetch('route_config')) {
     apc_add('route_config', $routes);
 }
 */
-$routes = (new ConfigParser)->fromFile('your-path-to-routes.conf');
+$routes = (new ConfigParser)->fromFile('routes.conf');
 
 // init router class with run controller function
 $router = new Router($routes, function ($controller, $action, array $args) {
