@@ -12,7 +12,7 @@ class SimpleAdapter extends Router {
             apc_add('route_config', $this->rules);
         }
         */
-        $this->routes = (new ConfigParser)->fromFile('your-path-to-routes.conf');
+        $this->routes = (new ConfigParser)->fromFile('routes.conf');
     }
 
     /**
