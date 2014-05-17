@@ -1,0 +1,23 @@
+{
+    "name": "paw34rus/PathFinder",
+    "description": "Simple and fast routing",
+    "keywords": ["routing", "router"],
+    "homepage": "https://github.com/paw34rus/PathFinder/",
+    "type": "library",
+    "version": "0.0.1",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "paw34rus",
+            "email": "paw34rus@yandex.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-0" : {
+            "PathFinder" : "lib/"
+        }
+    }
+}
