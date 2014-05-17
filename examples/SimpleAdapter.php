@@ -23,8 +23,9 @@ class SimpleAdapter extends Router {
      * @return mixed|void
      */
     public function process($controller, $action, array $args = []) {
-        $ctrl = new $controller();
-        echo $ctrl->$action($args);
+        header('Content-type: text/plain');
+        print_r(compact("controller", "action", "args"));
+        exit;
     }
 
     /**

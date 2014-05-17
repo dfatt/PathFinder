@@ -5,7 +5,7 @@ use UnexpectedValueException;
 
 /**
  * Class ConfigParser
- * @package Ffw\Routing
+ * @package PathFinder
  */
 class ConfigParser {
     const COMM = '#';

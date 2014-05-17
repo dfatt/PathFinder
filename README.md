@@ -35,12 +35,13 @@ PathFinder
 	POST /register
 
 ##Пример генерации URL
-
+```php
 	$url = $router->makeUrl('catalog', [
 		'page' => 42, 
 		'category' => 'news'
 	]); // "/news/42"
-
+```
 ##Пример разбора URL
-
+```php
 	$rules = $router->parseUrl('/news/42', 'GET'); // объект с контроллером, действием и т.д. или NoRouteException
+```

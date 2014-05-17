@@ -15,8 +15,9 @@ $routes = (new ConfigParser)->fromFile('your-path-to-routes.conf');
 
 // init router class with run controller function
 $router = new Router($routes, function ($controller, $action, array $args) {
-    $ctrl = new $controller();
-    echo $ctrl->$action($args);
+    header('Content-type: text/plain');
+    print_r(compact("controller", "action", "args"));
+    exit;
 });
 
 // run process

@@ -3,7 +3,7 @@ namespace PathFinder;
 
 /**
  * Class Router
- * @package Ffw\Routing
+ * @package PathFinder
  */
 class Router {
     /**
