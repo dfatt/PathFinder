@@ -9,12 +9,26 @@ PathFinder
 - Максимум DRY: шаблоны регулярных выражений для параметров, привязка нескольких URL к одному контроллеру и т.д.
 
 ## Установка
+**Через [composer](http://getcomposer.org/)**
+
+Добавьте зависимость в ваш composer.json:
+
+	"require": {
+		...
+		"paw34rus/path-finder": "dev-master"	
+	}
+
+**Простое копирование в папку с классами**
+
+PathFinder следует стандарту PSR-0, который поддерживает большинство автозагрузчиков.
+	
+##Использование
 
 Примеры built-in конфигурации и простого адаптера находятся в папке /examples
 
 ##Пример конфига
 
-	@category,htmlpage   [A-Za-zА-Яа-яЁё0-9_\.]+        #название категории или страницы
+	@category,htmlpage   [A-Za-zА-Яа-яЁё0-9_\.]+          #название категории или страницы
 	@page                [0-9]+                           #числовой идентификатор
 	@date                [0-9]{4}\-[0-9]{1,2}\-[0-9]{1,2} #дата в формате 2012-12-12
 	  
@@ -34,14 +48,15 @@ PathFinder
 	[Users:register]
 	POST /register
 
+
 ##Пример генерации URL
 ```php
-	$url = $router->makeUrl('catalog', [
-		'page' => 42, 
-		'category' => 'news'
-	]); // "/news/42"
+$url = $router->makeUrl('catalog', [
+	'page' => 42, 
+	'category' => 'news'
+]); // "/news/42"
 ```
 ##Пример разбора URL
 ```php
-	$rules = $router->parseUrl('/news/42', 'GET'); // объект с контроллером, действием и т.д. или NoRouteException
+$rules = $router->parseUrl('/news/42', 'GET'); // объект с контроллером, действием и т.д. или NoRouteException
 ```
